@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="table.css">
+    <title>Date student</title>
+</head>
+<body style="background-image: url('back.jpg');">
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="navbar-nav">
+                        <li class="nav-item nav">
+                            <a class="nav-link" href="home.html" title="pagina home">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                                    <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item active nav" >
+                            <a class="nav-link" href="date.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-file-person" viewBox="0 0 16 16">
+                                <path d="M12 1a1 1 0 0 1 1 1v10.755S12 11 8 11s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z"/>
+                                <path d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                            </svg><span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item nav">
+                            <a class="nav-link" href="discipline.html" title="Lista discipline">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-easel-fill" viewBox="0 0 16 16">
+                                <path d="M8.473.337a.5.5 0 0 0-.946 0L6.954 2H2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h1.85l-1.323 3.837a.5.5 0 1 0 .946.326L4.908 11H7.5v2.5a.5.5 0 0 0 1 0V11h2.592l1.435 4.163a.5.5 0 0 0 .946-.326L12.15 11H14a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H9.046L8.473.337z"/>
+                            </svg></a>
+                        </li>
+
+                    </ul>
+
+                    <ul class="navbar-nav ml-md-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#" title="iesire">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
+                                    <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                                </svg>
+                            </a>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid outer " >
+    <div class="row">
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="col-12 bg-light rounded divs">
+                        <h2>Informații student</h2>
+                        <dl>
+
+                            <dt>
+                                Nume:
+                            </dt>
+                            <dt>
+                                Data nasterii:
+                            </dt>
+                            <dt>
+                                Religie:
+                            </dt>
+                            <dt>
+                                Sex:
+                            </dt>
+                            <dt>
+                                Cetatenie:
+                            </dt>
+                            <dt>
+                                Cnp:
+                            </dt>
+                            <dt>
+                                Serie:
+                            </dt>
+                            <dd>
+                                Si alte lucruri importante
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="col-md-12 bg-light rounded divs">
+                        <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 ">
+                    <div class="col-md-12 bg-light rounded divs">
+                        <h2>Scolaritate</h2>
+                        <dl>
+                            <dt>
+                                Categorie studii:
+                            </dt>
+                            <dt>
+                                An absolvire liceu:
+                            </dt>
+                            <dt>
+                                Medie admitere:
+                            </dt>
+                            <dt>
+                                Facultate/colegiu:
+                            </dt>
+                            <dt>
+                                Specializare:
+                            </dt>
+                            <dt>
+                                An studiu:
+                            </dt>
+                            <dt>
+                                Grupă:
+                            </dt>
+                            <dt>
+                                Nr. matricol:
+                            </dt>
+
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-md-12 bg-light rounded divs">
+                    <h2>Listă discipline</h2>
+                    <ol>
+                        <li class="list-item">
+                            Lorem ipsum dolor sit amet
+                        </li>
+                        <li class="list-item">
+                            Consectetur adipiscing elit
+                        </li>
+                        <li class="list-item">
+                            Integer molestie lorem at massa
+                        </li>
+                        <li class="list-item">
+                            Facilisis in pretium nisl aliquet
+                        </li>
+                        <li class="list-item">
+                            Nulla volutpat aliquam velit
+                        </li>
+                        <li class="list-item">
+                            Faucibus porta lacus fringilla vel
+                        </li>
+                        <li class="list-item">
+                            Aenean sit amet erat nunc
+                        </li>
+                        <li class="list-item">
+                            Eget porttitor lorem
+                        </li>
+                        <li class="list-item">
+                            Lorem ipsum dolor sit amet
+                        </li>
+                        <li class="list-item">
+                            Consectetur adipiscing elit
+                        </li>
+                        <li class="list-item">
+                            Integer molestie lorem at massa
+                        </li>
+                        <li class="list-item">
+                            Facilisis in pretium nisl aliquet
+                        </li>
+                        <li class="list-item">
+                            Nulla volutpat aliquam velit
+                        </li>
+                        <li class="list-item">
+                            Faucibus porta lacus fringilla vel
+                        </li>
+                        <li class="list-item">
+                            Aenean sit amet erat nunc
+                        </li>
+                        <li class="list-item">
+                            Eget porttitor lorem
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
