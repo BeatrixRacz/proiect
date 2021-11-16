@@ -62,52 +62,70 @@
 </div>
 
 
-<div class="container-fluid bg-gradient" style="width: 90%; margin-top: 100px">
-    <div class="row" style="border: 1px solid">
+
+<div class="container-fluid " style="width: 90%; margin-top: 100px">
+    <div class="row">
         <div class="col-md-12">
-            <div class="row bg-light" >
-                <div class="col-md-1 " >P
-                </div>
-                <div class="col-md-1">D
-                </div>
-                <div class="col-md-1">R
-                </div>
-                <div class="col-md-3">Disciplină
-                </div>
-                <div class="col-md-1">Sem
-                </div>
-                <div class="col-md-2">Notă activități
-                </div>
-                <div class="col-md-1">Notă finală
-                </div>
-                <div class="col-md-1">Nr. credite
-                </div>
-                <div class="col-md-1">Nr. puncte credite
-                </div>
-            </div>
+            <h3>Note Discipline</h3>
 
-                <script  type="text/javascript">
-
-                    for (let i=0; i<40; i++) {
-                        document.write("<div class=\"row bg-light\">");
-                        document.write("<div class=\"col-md-1\"> - </div>");
-                        document.write("<div class=\"col-md-1\"> - </div>");
-                        document.write("<div class=\"col-md-1\"> - </div>");
-                        document.write("<div class=\"col-md-3\">" + "this is just another example" + " </div>");
-                        document.write("<div class=\"col-md-1\">" + 1 + " </div>");
-                        document.write("<div class=\"col-md-2\"> - </div>");
-                        document.write("<div class=\"col-md-1\"> - </div>");
-                        document.write("<div class=\"col-md-1\">" + 5 + " </div>");
-                        document.write("<div class=\"col-md-1\"> - </div>");
-                        document.write("</div>");
-                    }
-                </script>
 
         </div>
     </div>
+    <div class="row ">
+        <div class="col-md-12 ">
+            <table class="table  table-sm table-hover" >
+                <thead >
+                <tr >
+                    <th >
+                        P
+                    </th>
+                    <th>
+                        D
+                    </th>
+                    <th>
+                        R
+                    </th>
+                    <th>
+                        Disciplină
+                    </th>
+                    <th>
+                        Sem
+                    </th>
+                    <th>
+                        Notă activități
+                    </th>
+                    <th>
+                        Notă finală
+                    </th>
+                    <th>
+                        Nr. credite
+                    </th>
+                    <th>
+                        Nr. puncte credite
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <script  type="text/javascript">
+
+                    for (let i=0; i<40; i++) {
+                        document.write("<tr><td>-</td> ");
+                        document.write("<td> - </td>");
+                        document.write("<td> - </td>");
+                        document.write("<td>" + "this is just another example" + " </td>");
+                        document.write("<td>" + 1 + " </td>");
+                        document.write("<td> - </td>");
+                        document.write("<td> - </td>");
+                        document.write("<td>" + 5 + " </td>");
+                        document.write("<td> - </tr></tr>");
+                    }
+                </script>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
-
-
 
 </body>
 </html>

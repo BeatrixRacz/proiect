@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="table.css">
     <title>Lista studenti</title>
 </head>
-<body class="appBackground">
+<body style="background-image: url('back.jpg');">
 
 
 <div class="container-fluid divs">
@@ -52,7 +52,7 @@
 
 
 
-    <div class="container-fluid " style="margin-top: 100px">
+    <div class="container-fluid " style="width: 90%; margin-top: 100px">
         <div class="row">
             <div class="col-md-12">
                 <h3>Lista studenți</h3>
@@ -83,24 +83,17 @@
                 </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>
-                            1
-                        </td>
-                        <td>
-                            a very good name
-                        </td>
-                        <td>
-                            FMI
-                        </td>
-                        <td>
-                            IR
-                        </td>
-                        <td>
-                            3
-                        </td>
-                    </tr>
 
+                <script  type="text/javascript">
+
+                    for (let i=0; i<40; i++) {
+                        document.write("<tr><td>"+i+"</td> ");
+                        document.write("<td> some name </td>");
+                        document.write("<td> FMI </td>");
+                        document.write("<td> IR </td>");
+                        document.write("<td> 3 </td></tr>");
+                    }
+                </script>
                 </tbody>
             </table>
         </div>
@@ -109,3 +102,21 @@
 
 </body>
 </html>
+
+<tr>
+    <td>
+        1
+    </td>
+    <td>
+        a very good name
+    </td>
+    <td>
+        FMI
+    </td>
+    <td>
+        IR
+    </td>
+    <td>
+        3
+    </td>
+</tr>
