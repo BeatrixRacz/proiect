@@ -5,6 +5,73 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="table.css">
     <title>Date student</title>
+    <style>
+        table{
+            width: 100%;
+        }
+
+        tr{
+            padding: 10px 0px;
+        }
+
+        #tdName{
+            padding: 10px;
+        }
+
+        #meniu{
+            padding: 10px 0px;
+        }
+
+        button{
+            padding: 5px;
+            width: 100%;
+        }
+
+
+    </style>
+
+    <script>
+        function show(id)
+        {
+            var a = document.getElementById('general');
+            var b = document.getElementById('school');
+            var c = document.getElementById('financiar');
+            var d = document.getElementById('discipline');
+
+            switch (id) {
+                case 'general':
+                    a.style.display = "block";
+                    b.style.display = "none";
+                    c.style.display = "none";
+                    d.style.display = "none";
+                    break;
+
+                case 'school':
+                    b.style.display = "block";
+                    a.style.display = "none";
+                    c.style.display = "none";
+                    d.style.display = "none";
+                    break;
+
+                case 'financiar':
+                    c.style.display = "block";
+                    a.style.display = "none";
+                    b.style.display = "none";
+                    d.style.display = "none";
+                    break;
+
+                case 'discipline':
+                    d.style.display = "block";
+                    a.style.display = "none";
+                    b.style.display = "none";
+                    c.style.display = "none";
+                    break;
+
+                default:
+                    break;
+            }
+        }
+    </script>
 </head>
 <body style="background-image: url('back.jpg');">
 
@@ -61,144 +128,160 @@
 </div>
 
 
-<div class="container-fluid outer " >
-    <div class="row">
-        <div class="col-md-8">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="col-12 bg-light rounded divs">
-                        <h2>Informații student</h2>
-                        <dl>
+<div class="container-fluid outer" style="background-color: transparent; width: 50%;">
+    <div>
+        <table>
+            <tr>
+                <td><img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" /></td>
+                <td id='tdName'><h1>Nume Student</h1></td>
+            </tr>
+        </table>
+    </div>
 
-                            <dt>
-                                Nume:
-                            </dt>
-                            <dt>
-                                Data nasterii:
-                            </dt>
-                            <dt>
-                                Religie:
-                            </dt>
-                            <dt>
-                                Sex:
-                            </dt>
-                            <dt>
-                                Cetatenie:
-                            </dt>
-                            <dt>
-                                Cnp:
-                            </dt>
-                            <dt>
-                                Serie:
-                            </dt>
-                            <dd>
-                                Si alte lucruri importante
-                            </dd>
-                        </dl>
-                    </div>
-                </div>
-                <div class="col-md-4 ">
-                    <div class="col-md-12 bg-light rounded divs">
-                        <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+    <div id="meniu">
+        <table>
+            <tr>
+                <td style="width: 25%;">
+                    <button onclick="show('general')">Informații generale</button>
+                </td>
+                <td style="width: 25%;">
+                    <button onclick="show('school')">Scolaritate</button>
+                </td>
+                <td style="width: 25%;">
+                    <button onclick="show('financiar')">Financiar</button>
+                </td>
+                <td style="width: 25%;">
+                    <button onclick="show('discipline')">Lista discipline</button>
+                </td>
+            </tr>
+        </table>
 
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 ">
-                    <div class="col-md-12 bg-light rounded divs">
-                        <h2>Scolaritate</h2>
-                        <dl>
-                            <dt>
-                                Categorie studii:
-                            </dt>
-                            <dt>
-                                An absolvire liceu:
-                            </dt>
-                            <dt>
-                                Medie admitere:
-                            </dt>
-                            <dt>
-                                Facultate/colegiu:
-                            </dt>
-                            <dt>
-                                Specializare:
-                            </dt>
-                            <dt>
-                                An studiu:
-                            </dt>
-                            <dt>
-                                Grupă:
-                            </dt>
-                            <dt>
-                                Nr. matricol:
-                            </dt>
 
-                        </dl>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="row">
-                <div class="col-md-12 bg-light rounded divs">
-                    <h2>Listă discipline</h2>
-                    <ol>
-                        <li class="list-item">
-                            Lorem ipsum dolor sit amet
-                        </li>
-                        <li class="list-item">
-                            Consectetur adipiscing elit
-                        </li>
-                        <li class="list-item">
-                            Integer molestie lorem at massa
-                        </li>
-                        <li class="list-item">
-                            Facilisis in pretium nisl aliquet
-                        </li>
-                        <li class="list-item">
-                            Nulla volutpat aliquam velit
-                        </li>
-                        <li class="list-item">
-                            Faucibus porta lacus fringilla vel
-                        </li>
-                        <li class="list-item">
-                            Aenean sit amet erat nunc
-                        </li>
-                        <li class="list-item">
-                            Eget porttitor lorem
-                        </li>
-                        <li class="list-item">
-                            Lorem ipsum dolor sit amet
-                        </li>
-                        <li class="list-item">
-                            Consectetur adipiscing elit
-                        </li>
-                        <li class="list-item">
-                            Integer molestie lorem at massa
-                        </li>
-                        <li class="list-item">
-                            Facilisis in pretium nisl aliquet
-                        </li>
-                        <li class="list-item">
-                            Nulla volutpat aliquam velit
-                        </li>
-                        <li class="list-item">
-                            Faucibus porta lacus fringilla vel
-                        </li>
-                        <li class="list-item">
-                            Aenean sit amet erat nunc
-                        </li>
-                        <li class="list-item">
-                            Eget porttitor lorem
-                        </li>
-                    </ol>
-                </div>
-            </div>
-        </div>
+    </div>
+
+    <div id="general" class="col-12 bg-light rounded divs">
+        <h2>Informații student</h2>
+        <dl>
+            <dt>
+                Nume:
+            </dt>
+            <dt>
+                Data nasterii:
+            </dt>
+            <dt>
+                Religie:
+            </dt>
+            <dt>
+                Sex:
+            </dt>
+            <dt>
+                Cetatenie:
+            </dt>
+            <dt>
+                Cnp:
+            </dt>
+            <dt>
+                Serie:
+            </dt>
+            <dd>
+                Si alte lucruri importante
+            </dd>
+
+        </dl>
+    </div>
+
+    <div id="school" style="display: none;" class="col-12 bg-light rounded divs">
+        <h2>Scolaritate</h2>
+        <dl>
+            <dt>
+                Categorie studii:
+            </dt>
+            <dt>
+                An absolvire liceu:
+            </dt>
+            <dt>
+                Medie admitere:
+            </dt>
+            <dt>
+                Facultate/colegiu:
+            </dt>
+            <dt>
+                Cetatenie:
+            </dt>
+            <dt>
+                Specializare:
+            </dt>
+            <dt>
+                An studiu:
+            </dt>
+            <dt>
+                Grupă:
+            </dt>
+            <dt>
+                Nr. matricol:
+            </dt>
+
+        </dl>
+    </div>
+
+    <div id='financiar' style="display: none;" class="col-md-12 bg-light rounded divs">
+        <h2>Financiar</h2>
+    </div>
+
+    <div id='discipline' style="display: none;" class="col-md-12 bg-light rounded divs">
+        <h2>Listă discipline</h2>
+        <ol>
+            <li class="list-item">
+                Lorem ipsum dolor sit amet
+            </li>
+            <li class="list-item">
+                Consectetur adipiscing elit
+            </li>
+            <li class="list-item">
+                Integer molestie lorem at massa
+            </li>
+            <li class="list-item">
+                Facilisis in pretium nisl aliquet
+            </li>
+            <li class="list-item">
+                Nulla volutpat aliquam velit
+            </li>
+            <li class="list-item">
+                Faucibus porta lacus fringilla vel
+            </li>
+            <li class="list-item">
+                Aenean sit amet erat nunc
+            </li>
+            <li class="list-item">
+                Eget porttitor lorem
+            </li>
+            <li class="list-item">
+                Lorem ipsum dolor sit amet
+            </li>
+            <li class="list-item">
+                Consectetur adipiscing elit
+            </li>
+            <li class="list-item">
+                Integer molestie lorem at massa
+            </li>
+            <li class="list-item">
+                Facilisis in pretium nisl aliquet
+            </li>
+            <li class="list-item">
+                Nulla volutpat aliquam velit
+            </li>
+            <li class="list-item">
+                Faucibus porta lacus fringilla vel
+            </li>
+            <li class="list-item">
+                Aenean sit amet erat nunc
+            </li>
+            <li class="list-item">
+                Eget porttitor lorem
+            </li>
+        </ol>
     </div>
 </div>
-
 
 </body>
 </html>
