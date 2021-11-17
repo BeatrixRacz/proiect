@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="table.css">
     <title>Date student</title>
+
     <style>
         table{
             width: 100%;
@@ -21,12 +22,6 @@
         #meniu{
             padding: 10px 0px;
         }
-
-        button{
-            padding: 5px;
-            width: 100%;
-        }
-
 
     </style>
 
@@ -66,14 +61,14 @@
                     b.style.display = "none";
                     c.style.display = "none";
                     break;
-
+            
                 default:
                     break;
             }
         }
     </script>
 </head>
-<body style="background-image: url('back.jpg');">
+<body style="background-image: url('2.jpg'); background-repeat: no-repeat;">
 
 <div class="container-fluid">
     <div class="row">
@@ -117,16 +112,12 @@
                                 </svg>
                             </a>
                         </li>
-
-
-
                     </ul>
                 </div>
             </nav>
         </div>
     </div>
 </div>
-
 
 <div class="container-fluid outer" style="background-color: transparent; width: 50%;">
     <div>
@@ -138,28 +129,14 @@
         </table>
     </div>
 
-    <div id="meniu">
-        <table>
-            <tr>
-                <td style="width: 25%;">
-                    <button onclick="show('general')">Informații generale</button>
-                </td>
-                <td style="width: 25%;">
-                    <button onclick="show('school')">Scolaritate</button>
-                </td>
-                <td style="width: 25%;">
-                    <button onclick="show('financiar')">Financiar</button>
-                </td>
-                <td style="width: 25%;">
-                    <button onclick="show('discipline')">Lista discipline</button>
-                </td>
-            </tr>
-        </table>
-
-
+    <div class="btn-group" role="group" aria-label="Basic example" style="width: 100%; padding: 10px 0px;">
+        <button type="button" class="btn btn-secondary" onclick="show('general')">Informatii</button>
+        <button type="button" class="btn btn-secondary" onclick="show('school')">Scolaritate</button>
+        <button type="button" class="btn btn-secondary" onclick="show('financiar')">Financiar</button>
+        <button type="button" class="btn btn-secondary" onclick="show('discipline')">Discipline</button>
     </div>
 
-    <div id="general" class="col-12 bg-light rounded divs">
+    <div id="general" >
         <h2>Informații student</h2>
         <dl>
             <dt>
@@ -186,11 +163,11 @@
             <dd>
                 Si alte lucruri importante
             </dd>
-
+                                
         </dl>
     </div>
 
-    <div id="school" style="display: none;" class="col-12 bg-light rounded divs">
+    <div id="school" style="display: none;">
         <h2>Scolaritate</h2>
         <dl>
             <dt>
@@ -220,15 +197,26 @@
             <dt>
                 Nr. matricol:
             </dt>
-
+                                
         </dl>
     </div>
 
-    <div id='financiar' style="display: none;" class="col-md-12 bg-light rounded divs">
+    <div id='financiar' style="display: none;">
         <h2>Financiar</h2>
+        <dl>
+            <dt>
+                Informatii Financiar
+            </dt>
+            <dt>
+                Informatii Cazare
+            </dt>
+            <dt>
+                Plati
+            </dt>                                
+        </dl>
     </div>
 
-    <div id='discipline' style="display: none;" class="col-md-12 bg-light rounded divs">
+    <div id='discipline' style="display: none;">
         <h2>Listă discipline</h2>
         <ol>
             <li class="list-item">
@@ -281,7 +269,6 @@
             </li>
         </ol>
     </div>
-</div>
 
 </body>
 </html>
