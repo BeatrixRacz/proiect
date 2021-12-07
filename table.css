@@ -6,8 +6,8 @@
 }
 .appBackground2{
     background-image: url("back.jpg");
-    background-repeat:no-repeat;
-    background-size:100% 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .onright{
     float:right;
