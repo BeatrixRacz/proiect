@@ -34,7 +34,7 @@
                     </div>
 
                     <!-- Submit button -->
-                    <button type="submit" name="submit" class="btn  btn-lg btn-block" style="background-color: #F27DF5">Sign in</button>
+                    <button type="submit" name="submit" class="btn  btn-lg btn-block" style="background-color: #88BBD6">Sign in</button>
                 </form>
             </div>
         </div>
