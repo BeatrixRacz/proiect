@@ -1,9 +1,9 @@
 .appBackground {
     background: rgb(153,211,223);
-
-    background: linear-gradient(45deg, rgba(153,211,223,1) 0%, rgba(136,187,214,1) 25%, rgba(205,205,205,1) 75%, rgba(185,185,185,1) 100%);
     background-repeat: no-repeat;
-    background-size:100% 100vh;
+    background: linear-gradient(45deg, rgba(153,211,223,1) 0%, rgba(136,187,214,1) 25%, rgba(205,205,205,1) 75%, rgba(185,185,185,1) 100%);
+    background-attachment: fixed;
+    height: 100%;
 }
 
 .onright{
@@ -30,30 +30,27 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #CDCDCD;
+    background-color: 	#383838;
     transition: 0.5s;
     overflow-x: hidden;
     white-space: nowrap;
 }
 
 .sidebar-logo {
-    padding: 20px 30% 30px 30%;
-    font-size: 25px;
+    width: 100%;
 
-    background-color: #CDCDCD;
-    border: 10px black;
 }
 
 .sidebar a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 20px;
-    color: black;
+    color:  #f1f1f1;
     display: block;
 }
 
 .sidebar a:hover {
-    color: #f1f1f1;
+    background-color: 	#181818 ;
 }
 
 main .sidebar {
@@ -89,3 +86,5 @@ main .sidebar {
         font-size: 18px;
     }
 }
+
+
