@@ -88,17 +88,19 @@
                 <div class="col-md-4 ">
                     <div class="reclama "  >
                         <div class="photo" style="background-image: url('grade.jpg'); "></div>
+                         <div class="bg-text">Note</div>
                     </div>
                 </div>
                 <div class="col-md-4 ">
                     <div class="reclama "  >
                         <div class="photo" style="background-image: url('books.jpg'); "></div>
+                         <div class="bg-text">Discipline</div>
                     </div>
                 </div>
                 <div class="col-md-4 ">
                     <div class="reclama "  >
                         <div class="photo" style="background-image: url('finance.jpg'); "></div>
-
+                        <div class="bg-text">Financiar</div>
                     </div>
 
                 </div>
