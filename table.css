@@ -181,3 +181,12 @@ main .sidebar {
     display: table;
     color: #4ad1e5;
 }
+.buton{
+    margin-bottom: 10px;
+    background-color: #88BBD6;
+
+}
+.buton a{
+    color: white;
+
+}
