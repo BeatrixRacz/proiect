@@ -25,7 +25,7 @@
 <div id="mySidebar" class="sidebar" >
     <div class="sidebar-logo"><img src="student.png" alt="logo" width="100%"/></div>
     <a href="home.php"><i class="material-icons">home</i><span class="icon-text">Home</span></a><br>
-    <a href="date.html"><i class="material-icons">assignment_ind</i><span class="icon-text">Date personale</span></a><br>
+    <a href="date.php"><i class="material-icons">assignment_ind</i><span class="icon-text">Date personale</span></a><br>
     <a href="discipline.html"><i class="material-icons">source</i><span class="icon-text">Discipline</span></a><br>
     <a href="login.php" style="position: fixed; bottom: 0; width:18%"><i class="material-icons">logout</i><span class="icon-text">Iesire</span></a>
 </div>
