@@ -110,6 +110,7 @@
         {
             while($row = mysqli_fetch_assoc($result))
             {
+                //$row["NUME"]
                 $an = $row['AN'];
                 echo "<div id='general'>";
                 echo " <h2>Informații student</h2>
