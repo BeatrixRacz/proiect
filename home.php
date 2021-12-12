@@ -38,7 +38,7 @@
                 <div class="row">
                     <div class="col-md-12 titlu">
                         Choose the<br>
-                        <h1>Best Education for your future</h1>
+                        Best Education for your future
                     </div>
                 </div>
             </div>
@@ -46,10 +46,10 @@
         <div class="row">
             <div class="col-md-12 inf">
             <div class="row text-center">
-            	        <div class="col">
+            	<div class="col">
             	        <div class="counter">
-                  <i class="fa fa-code fa-2x"></i>
-                  <h2 class="timer count-title count-number" data-to="1700" data-speed="1500"></h2>
+                             <i class="fa fa-code fa-2x"></i>
+                   <h2 class="timer count-title count-number" data-to="1700" data-speed="1500"></h2>
                    <p class="count-text ">Studenti online</p>
                 </div>
             	        </div>
@@ -69,8 +69,8 @@
                           <div class="col">
                           <div class="counter">
                   <i class="fa fa-bug fa-2x"></i>
-                  <h2 class="timer count-title count-number" data-to="0" data-speed="1500"></h2>
-                  <p class="count-text ">Probleme</p>
+                  <h2 class="timer count-title count-number" data-to="1" data-speed="1500"></h2>
+                  <p class="count-text ">Universitate</p>
                 </div>
                           </div>
                      </div>

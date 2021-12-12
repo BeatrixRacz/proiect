@@ -89,21 +89,25 @@ main .sidebar {
 
 .titlu{
     font-family: "Baskerville Old Face";
-    font-size: 32px;
+    font-size: 55px;
     width:100%;
     height: 300px;
     padding-top: 100px;
     text-align: center;
     margin-bottom: 50px;
 }
-
+.stud{
+    padding-bottom: 20px;
+    font-family: "Baskerville Old Face";
+    font-size: 35px;
+}
 
 .inf{
     font-family: "Baskerville Old Face";
     font-size: 26px;
     width:100%;
     height: 300px;
-    padding-top: 100px;
+    padding-top: 70px;
     text-align: center;
     margin-bottom: 100px;
 }
@@ -164,7 +168,7 @@ main .sidebar {
 }
 
 .count-text {
-    font-size: 13px;
+    font-size: 20px;
     font-weight: normal;
     margin-top: 10px;
     margin-bottom: 0;
