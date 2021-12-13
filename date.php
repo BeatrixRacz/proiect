@@ -87,7 +87,8 @@
         <table>
             <tr>
                 <td><img alt="Bootstrap Image Preview" src="user.jpg" style="width: 100px; border-radius: 50%;" /></td>
-                <td id='tdName'><h1>Nume Student</h1></td>
+                <td id='tdName'><h1>Informații Personale</h1></td>
+
             </tr>
         </table>
     </div>
