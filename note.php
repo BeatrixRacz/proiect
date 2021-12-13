@@ -20,7 +20,7 @@
     <div class="sidebar-logo"><img src="student.png" alt="logo" width="100%"/></div>
     <a href="home2.php"><i class="material-icons">home</i><span class="icon-text">Home</span></a><br>
     <a href="studenti.html"><i class="material-icons">source</i><span class="icon-text">Lista Studenți</span></a><br>
-    <a href="note.php"><i class="material-icons">source</i><span class="icon-text">Note Studenți</span></a><br> 
+    <a href="note.php"><i class="material-icons">grading</i><span class="icon-text">Note Studenți</span></a><br>
     <a href="login.php" style="position: fixed; bottom: 0; width:18%"><i class="material-icons">logout</i><span class="icon-text">Iesire</span></a>
 </div>
 

@@ -20,7 +20,7 @@
     <div class="sidebar-logo"><img src="student.png" alt="logo" width="100%"/></div>
     <a href="home2.php"><i class="material-icons">home</i><span class="icon-text">Home</span></a><br>
     <a href="studenti.html"><i class="material-icons">source</i><span class="icon-text">Lista Studenți</span></a><br>
-    <a href="note.php"><i class="material-icons">source</i><span class="icon-text">Note Studenți</span></a><br>
+    <a href="note.php"><i class="material-icons">grading</i><span class="icon-text">Note Studenți</span></a><br>
     <a href="login.php" style="position: fixed; bottom: 0; width:18%"><i class="material-icons">logout</i><span class="icon-text">Iesire</span></a>
 </div>
 
@@ -56,14 +56,24 @@
 
                     <div class="form-outline mb-4">
                         <label class="form-label" for="an">An:</label>
-                        <input  type="number" name="an" id="an" class="form-control form-control-lg" />
-
+                       <select name="an" id="an" class="form-control form-control-lg">
+                           <option value="1">1</option>
+                           <option value="2">2</option>
+                           <option value="3">3</option>
+                           <option value="4">4</option>
+                       </select>
                     </div>
 
                     <div class="form-outline mb-4">
                         <label class="form-label" for="grupa">Grupă:</label>
-                        <input  type="number" name="grupa" id="grupa" class="form-control form-control-lg" />
-
+                        <select name="grupa" id="grupa" class="form-control form-control-lg">
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                         <option value="4">4</option>
+                         <option value="5">5</option>
+                         <option value="6">6</option>
+                        </select>
                     </div>
 
                     <div class="form-outline mb-4">
@@ -88,7 +98,7 @@
 
                     <div class="form-outline mb-4">
                         <label class="form-label" for="nastere">Data nasterii:</label>
-                        <input  type="text" name="nastere" id="nastere" class="form-control form-control-lg" />
+                        <input  type="date" name="nastere" id="nastere" class="form-control form-control-lg" />
 
                     </div>
 

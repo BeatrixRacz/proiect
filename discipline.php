@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	if (!isset($_SESSION["userid"])) {
+		header("Location: login.php");
+	}
+	include_once 'includes/db.inc.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +20,7 @@
     <div class="sidebar-logo"><img src="student.png" alt="logo" width="100%"/></div>
     <a href="home.php"><i class="material-icons">home</i><span class="icon-text">Home</span></a><br>
     <a href="date.php"><i class="material-icons">assignment_ind</i><span class="icon-text">Date personale</span></a><br>
-    <a href="discipline.html"><i class="material-icons">source</i><span class="icon-text">Discipline</span></a><br>
+    <a href="discipline.php"><i class="material-icons">source</i><span class="icon-text">Discipline</span></a><br>
     <a href="login.php" style="position: fixed; bottom: 0; width:18%"><i class="material-icons">logout</i><span class="icon-text">Iesire</span></a>
 </div>
 
@@ -62,20 +69,33 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <script  type="text/javascript">
 
-                        for (let i=0; i<40; i++) {
-                            document.write("<tr><td>-</td> ");
-                            document.write("<td> - </td>");
-                            document.write("<td> - </td>");
-                            document.write("<td>" + "this is just another example" + " </td>");
-                            document.write("<td>" + 1 + " </td>");
-                            document.write("<td> - </td>");
-                            document.write("<td> - </td>");
-                            document.write("<td>" + 5 + " </td>");
-                            document.write("<td> - </tr></tr>");
-                        }
-                    </script>
+
+                        <?php
+                                $id = $_SESSION["userid"];
+                                $sql = "SELECT materii.DENUMIRE, materii.CREDITE,materii.SEMESTRU, note.NOTA_EXAMEN, note.NOTA_PARTIAL FROM note, materii where materii.ID_MATERIE=note.ID_MATERIE and note.ID_STUDENT=$id";
+                                $result = mysqli_query($conn, $sql);
+                                $resultCheck = mysqli_num_rows($result);
+                                if($resultCheck > 0)
+                                {
+                                    while($row = mysqli_fetch_assoc($result))
+                                    {
+
+                                        echo " <tr><td>-</td>
+                                        <td> - </td>
+                                        <td> - </td>
+                                        <td>" . $row["DENUMIRE"] . "</td>
+                                        <td>" . $row["SEMESTRU"] . "</td>
+                                        <td>" . $row["NOTA_PARTIAL"] . "</td>
+                                        <td>" . $row["NOTA_EXAMEN"] . "</td>
+                                        <td>" . $row["CREDITE"] . "</td>
+                                        <td> - </td></tr>";
+
+
+
+                                       }
+                                }
+                               ?>
 
                     </tbody>
                 </table>
