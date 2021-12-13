@@ -53,27 +53,42 @@
                         Facultate
                     </th>
                     <th>
-                        Specializare
+                        An
                     </th>
                     <th>
-                        An
+                        Semestru
+                    </th>
+                    <th>
+                        Specializare
                     </th>
                 </tr>
                 </thead>
                 <tbody>
 
+                 <?php
+                                 $id = $_SESSION["userid"];
+                                 $sql = "SELECT ID_MATERIE, DENUMIRE, AN, SEMESTRU, profesori.NUME, profesori.FACULTATE FROM materii INNER JOIN profesori ON profesori.ID_PROFESOR=materii.ID_PROFESOR";
+                                 $result = mysqli_query($conn, $sql);
+                                 $resultCheck = mysqli_num_rows($result);
+                                 if($resultCheck > 0)
+                                 {
+                                     while($row = mysqli_fetch_assoc($result))
+                                     {
+
+                                     echo " <tr>
+                                     <td>" . $row["ID_MATERIE"] . "</td>
+                                     <td>" . $row["DENUMIRE"] . "</td>
+                                     <td>" . $row["FACULTATE"] . "</td>
+                                     <td>" . $row["AN"] . "</td>
+                                     <td>" . $row["SEMESTRU"] . "</td>
+                                     <td>" . $row["NUME"] . "</td>
+                                     </tr>";
 
 
-                <script  type="text/javascript">
 
-                    for (let i=0; i<40; i++) {
-                        document.write("<tr><td>"+i+"</td> ");
-                        document.write("<td> some name </td>");
-                        document.write("<td> FMI </td>");
-                        document.write("<td> IR </td>");
-                        document.write("<td> 3 </td></tr>");
-                    }
-                </script>
+                                     }
+                                 }
+                                 ?>
                 </tbody>
             </table>
         </div>

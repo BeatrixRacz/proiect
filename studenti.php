@@ -82,7 +82,7 @@
                      <td>" . $row["FACULTATE"] . "</td>
                      <td>" . $row["SPECIALIZARE"] . "</td>
                      <td>" . $row["AN"] . "</td>
-                     <td> - </td></tr>";
+                     </tr>";
 
 
 
