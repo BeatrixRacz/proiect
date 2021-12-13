@@ -1,3 +1,11 @@
+<?php
+	session_start();
+	if (!isset($_SESSION["userid"])) {
+		header("Location: login.php");
+	}
+	include_once 'includes/db.inc.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +26,7 @@
 <div id="mySidebar" class="sidebar" >
     <div class="sidebar-logo"><img src="student.png" alt="logo" width="100%"/></div>
     <a href="home2.php"><i class="material-icons">home</i><span class="icon-text">Home</span></a><br>
-    <a href="studenti.html"><i class="material-icons">source</i><span class="icon-text">Lista Studenți</span></a><br>
+    <a href="studenti.php"><i class="material-icons">source</i><span class="icon-text">Lista Studenți</span></a><br>
     <a href="note.php"><i class="material-icons">grading</i><span class="icon-text">Note Studenți</span></a><br>
     <a href="login.php" style="position: fixed; bottom: 0; width:18%"><i class="material-icons">logout</i><span class="icon-text">Iesire</span></a>
 </div>
@@ -56,16 +64,31 @@
                 </thead>
                 <tbody>
 
-                <script  type="text/javascript">
 
-                    for (let i=0; i<40; i++) {
-                        document.write("<tr><td>"+i+"</td> ");
-                        document.write("<td> some name </td>");
-                        document.write("<td> FMI </td>");
-                        document.write("<td> IR </td>");
-                        document.write("<td> 3 </td></tr>");
-                    }
-                </script>
+
+                <?php
+                 $id = $_SESSION["userid"];
+                 $sql = "SELECT ID_STUDENT,NUME,FACULTATE,SPECIALIZARE,AN FROM studenti ORDER by FACULTATE, AN ASC;";
+                 $result = mysqli_query($conn, $sql);
+                 $resultCheck = mysqli_num_rows($result);
+                 if($resultCheck > 0)
+                 {
+                     while($row = mysqli_fetch_assoc($result))
+                     {
+
+                     echo " <tr>
+                     <td>" . $row["ID_STUDENT"] . "</td>
+                     <td>" . $row["NUME"] . "</td>
+                     <td>" . $row["FACULTATE"] . "</td>
+                     <td>" . $row["SPECIALIZARE"] . "</td>
+                     <td>" . $row["AN"] . "</td>
+                     <td> - </td></tr>";
+
+
+
+                     }
+                 }
+                 ?>
                 </tbody>
             </table>
         </div>
@@ -77,4 +100,3 @@
 
 </body>
 </html>
-
