@@ -110,7 +110,7 @@ function loginUser($conn, $email, $password)
             session_start();
             $_SESSION["userid"] = $uidExists["ID_PROFESOR"];
             $_SESSION["type"] = "PROFESOR";
-            header("Location:../studenti.php");
+            header("Location:../home2.php");
             exit();
         }
     }
