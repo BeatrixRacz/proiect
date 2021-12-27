@@ -33,18 +33,20 @@
 <div  id="main">
 <div class="container-fluid "  style="width: 90%; margin-top: 50px">
         <div class="row">
-            <div class="col-md-12">
-                <h3>Lista studenți</h3>
+             <h3>Lista studenți</h3>
+        </div>
+        <div class="row">
+             <div class="col-md-6" >
+                <div class="btn buton ">
+                     <a href="export.php" >Export</a>
+                </div>
+             </div>
+            <div class="col-md-6">
                 <div class="btn buton float-right" >
                     <a href="addstudent.php"  >Adaugă student</a>
                 </div>
             </div>
-            <div class="col-md-12"></div>
-            <divclass="col-md-13>
-            <div class="btn btn float-right">
-                <a href="export.php" ">Export</a>
-            </div>
-            </div>
+
         </div>
     <div class="row ">
         <div class="col-md-12 ">
