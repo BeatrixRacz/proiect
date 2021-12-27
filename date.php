@@ -111,7 +111,6 @@
         {
             while($row = mysqli_fetch_assoc($result))
             {
-                //$row["NUME"]
                 $an = $row['AN'];
                 echo "<div id='general'>";
                 echo " <h2>Informații student</h2>
@@ -130,8 +129,14 @@
                     </dt>
                     <dt>
                         Telefon: " . $row["TELEFON"] . "
-                    </dt>                          
-                </dl>";
+                    </dt>
+                    <dt>
+                        IBAN: ";
+                    if ($row["IBAN"] == NULL) {
+                        echo "-";
+                    }
+                    else echo $row["IBAN"];
+                    echo "</dt></dl>";
                 echo "</div>";
 
                 echo "<div id='school' style='display: none;'>"; 
@@ -160,16 +165,17 @@
             }    
         }
 
+        echo "<div id='discipline' style='display: none;'>";
+            echo "<h2>Listă discipline</h2> <h4> Semestrul I </h4>
+                <ol>";
         $sql = "SELECT *
         FROM MATERII
-        WHERE AN = '$an';";
+        WHERE AN = '$an' AND SEMESTRU = 1;";
         $result = mysqli_query($conn, $sql);
         $resultCheck = mysqli_num_rows($result);
         if($resultCheck > 0)
         {
-            echo "<div id='discipline' style='display: none;'>";
-            echo "<h2>Listă discipline</h2>
-                <ol>";
+            
             while($row = mysqli_fetch_assoc($result))
             {
                 echo "
@@ -178,25 +184,47 @@
                     </li>
                 ";
             }
-            echo "</ol></div>";
         }
+        echo "</ol>";
+
+        echo "<h4> Semestrul II </h4> <ol>";
+        $sql = "SELECT *
+        FROM MATERII
+        WHERE AN = '$an' AND SEMESTRU = 2;";
+        $result = mysqli_query($conn, $sql);
+        $resultCheck = mysqli_num_rows($result);
+        if($resultCheck > 0)
+        {
+            
+            while($row = mysqli_fetch_assoc($result))
+            {
+                echo "
+                    <li class='list-item'>
+                        " . $row['DENUMIRE'] . "
+                    </li>
+                ";
+            }
+        }
+        echo "</ol>";
+        echo "</div>";
+
+        echo "<div id='financiar' style='display: none;'> <h2>Financiar</h2> <dl> <dt>Burse</dt>";
+        $sql = "SELECT *
+        FROM BURSE_STUDENTI bs, BURSE b
+        WHERE bs.ID_STUDENT = '$id' AND b.ID_BURSA = bs.ID_BURSA;";
+        $result = mysqli_query($conn, $sql);
+        $resultCheck = mysqli_num_rows($result);
+        if($resultCheck > 0)
+        {
+            while($row = mysqli_fetch_assoc($result))
+            {
+                echo $row['DENUMIRE'] . ": " . $row['VALOARE'] . " RON";
+            }
+        }
+        else
+            echo "Nu s-a gasit nicio bursa pentru acest student.";                            
+        echo "</dl></div>";
     ?>
-
-    <div id='financiar' style="display: none;">
-        <h2>Financiar</h2>
-        <dl>
-            <dt>
-                Informatii Financiar
-            </dt>
-            <dt>
-                Informatii Cazare
-            </dt>
-            <dt>
-                Plati
-            </dt>                                
-        </dl>
-    </div>
-
 </div>
 </div>
 </body>

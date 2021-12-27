@@ -30,8 +30,6 @@
         <div class="row">
             <div class="col-md-12">
                 <h3>Note Discipline</h3>
-
-
             </div>
         </div>
         <div class="row ">
@@ -55,16 +53,19 @@
                             Sem
                         </th>
                         <th>
-                            Notă activități
+                            Note Teste
                         </th>
                         <th>
-                            Notă finală
+                            Medie Teste
+                        </th>
+                        <th>
+                            Notă partial
+                        </th>
+                        <th>
+                            Notă examen
                         </th>
                         <th>
                             Nr. credite
-                        </th>
-                        <th>
-                            Nr. puncte credite
                         </th>
                     </tr>
                     </thead>
@@ -72,30 +73,38 @@
 
 
                         <?php
-                                $id = $_SESSION["userid"];
-                                $sql = "SELECT materii.DENUMIRE, materii.CREDITE,materii.SEMESTRU, note.NOTA_EXAMEN, note.NOTA_PARTIAL FROM note, materii where materii.ID_MATERIE=note.ID_MATERIE and note.ID_STUDENT=$id";
-                                $result = mysqli_query($conn, $sql);
-                                $resultCheck = mysqli_num_rows($result);
-                                if($resultCheck > 0)
+                            $id = $_SESSION["userid"];
+                            $sql = "SELECT materii.DENUMIRE, materii.CREDITE,materii.SEMESTRU, note.NOTE_TESTE, note.NOTA_EXAMEN, note.NOTA_PARTIAL
+                            FROM note, materii
+                            WHERE materii.ID_MATERIE = note.ID_MATERIE AND note.ID_STUDENT = $id
+                            ORDER BY materii.SEMESTRU, materii.DENUMIRE";
+                            $result = mysqli_query($conn, $sql);
+                            $resultCheck = mysqli_num_rows($result);
+                            if($resultCheck > 0)
+                            {
+                                while($row = mysqli_fetch_assoc($result))
                                 {
-                                    while($row = mysqli_fetch_assoc($result))
-                                    {
-
-                                        echo " <tr><td>-</td>
-                                        <td> - </td>
-                                        <td> - </td>
-                                        <td>" . $row["DENUMIRE"] . "</td>
-                                        <td>" . $row["SEMESTRU"] . "</td>
-                                        <td>" . $row["NOTA_PARTIAL"] . "</td>
-                                        <td>" . $row["NOTA_EXAMEN"] . "</td>
-                                        <td>" . $row["CREDITE"] . "</td>
-                                        <td> - </td></tr>";
-
-
-
-                                       }
+                                    $note = $row["NOTE_TESTE"];
+                                    $keywords = preg_split("/[\s,;:.]+/", $note);
+                                    $media = 0;
+                                    $nr = 0;
+                                    foreach ($keywords as $key => $value) {
+                                        $media += (int) $value;
+                                        $nr += 1;
+                                    }
+                                    echo " <tr><td>-</td>
+                                    <td> - </td>
+                                    <td> - </td>
+                                    <td>" . $row["DENUMIRE"] . "</td>
+                                    <td>" . $row["SEMESTRU"] . "</td>
+                                    <td>" . $row["NOTE_TESTE"] . "</td>
+                                    <td>" . $media/$nr . "</td>
+                                    <td>" . $row["NOTA_PARTIAL"] . "</td>
+                                    <td>" . $row["NOTA_EXAMEN"] . "</td>
+                                    <td>" . $row["CREDITE"] . "</td></tr>";
                                 }
-                               ?>
+                            }
+                        ?>
 
                     </tbody>
                 </table>

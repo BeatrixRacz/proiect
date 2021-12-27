@@ -21,7 +21,6 @@
 </head>
 <body class="appBackground">
 
-
 <div id="mySidebar" class="sidebar" >
     <div class="sidebar-logo"><img src="student.png" alt="logo" width="100%"/></div>
     <a href="home2.php"><i class="material-icons">home</i><span class="icon-text">Home</span></a><br>
@@ -66,29 +65,25 @@
                 <tbody>
 
                  <?php
-                                 $id = $_SESSION["userid"];
-                                 $sql = "SELECT ID_MATERIE, DENUMIRE, AN, SEMESTRU, profesori.NUME, profesori.FACULTATE FROM materii INNER JOIN profesori ON profesori.ID_PROFESOR=materii.ID_PROFESOR";
-                                 $result = mysqli_query($conn, $sql);
-                                 $resultCheck = mysqli_num_rows($result);
-                                 if($resultCheck > 0)
-                                 {
-                                     while($row = mysqli_fetch_assoc($result))
-                                     {
-
-                                     echo " <tr>
-                                     <td>" . $row["ID_MATERIE"] . "</td>
-                                     <td>" . $row["DENUMIRE"] . "</td>
-                                     <td>" . $row["FACULTATE"] . "</td>
-                                     <td>" . $row["AN"] . "</td>
-                                     <td>" . $row["SEMESTRU"] . "</td>
-                                     <td>" . $row["NUME"] . "</td>
-                                     </tr>";
-
-
-
-                                     }
-                                 }
-                                 ?>
+                    $id = $_SESSION["userid"];
+                    $sql = "SELECT ID_MATERIE, DENUMIRE, AN, SEMESTRU, profesori.NUME, profesori.FACULTATE FROM materii INNER JOIN profesori ON profesori.ID_PROFESOR=materii.ID_PROFESOR";
+                    $result = mysqli_query($conn, $sql);
+                    $resultCheck = mysqli_num_rows($result);
+                    if($resultCheck > 0)
+                    {
+                        while($row = mysqli_fetch_assoc($result))
+                        {
+                            echo " <tr>
+                            <td>" . $row["ID_MATERIE"] . "</td>
+                                <td>" . $row["DENUMIRE"] . "</td>
+                            <td>" . $row["FACULTATE"] . "</td>
+                            <td>" . $row["AN"] . "</td>
+                            <td>" . $row["SEMESTRU"] . "</td>
+                            <td>" . $row["NUME"] . "</td>
+                            </tr>";
+                        }
+                    }
+                ?>
                 </tbody>
             </table>
         </div>
