@@ -42,23 +42,21 @@
             <table class="table  table-sm table-hover " >
                 <thead >
                 <tr >
-                    <th >
-                        Id
-                    </th>
+
                     <th>
                         Nume Discipliă
                     </th>
                     <th>
-                        Facultate
+                        Nume Student
                     </th>
                     <th>
-                        An
+                        Note teste
                     </th>
                     <th>
-                        Semestru
+                        Nota partial
                     </th>
                     <th>
-                        Specializare
+                        Nota examen
                     </th>
                 </tr>
                 </thead>
@@ -66,7 +64,10 @@
 
                  <?php
                     $id = $_SESSION["userid"];
-                    $sql = "SELECT ID_MATERIE, DENUMIRE, AN, SEMESTRU, profesori.NUME, profesori.FACULTATE FROM materii INNER JOIN profesori ON profesori.ID_PROFESOR=materii.ID_PROFESOR";
+                    $sql = "SELECT m.DENUMIRE,s.NUME, n.NOTE_TESTE, n.NOTA_PARTIAL, n.NOTA_EXAMEN from note n
+                            INNER JOIN studenti s  ON n.ID_STUDENT=s.ID_STUDENT
+                            INNER JOIN materii m ON n.ID_MATERIE=m.ID_MATERIE
+                            INNER join profesori p ON m.ID_PROFESOR=p.ID_PROFESOR where p.ID_PROFESOR = '$id';";
                     $result = mysqli_query($conn, $sql);
                     $resultCheck = mysqli_num_rows($result);
                     if($resultCheck > 0)
@@ -74,12 +75,11 @@
                         while($row = mysqli_fetch_assoc($result))
                         {
                             echo " <tr>
-                            <td>" . $row["ID_MATERIE"] . "</td>
-                                <td>" . $row["DENUMIRE"] . "</td>
-                            <td>" . $row["FACULTATE"] . "</td>
-                            <td>" . $row["AN"] . "</td>
-                            <td>" . $row["SEMESTRU"] . "</td>
+                            <td>" . $row["DENUMIRE"] . "</td>
                             <td>" . $row["NUME"] . "</td>
+                            <td>" . $row["NOTE_TESTE"] . "</td>
+                            <td>" . $row["NOTA_PARTIAL"] . "</td>
+                            <td>" . $row["NOTA_EXAMEN"] . "</td>
                             </tr>";
                         }
                     }

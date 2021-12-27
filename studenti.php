@@ -37,12 +37,12 @@
         </div>
         <div class="row">
              <div class="col-md-6" >
-                <div class="btn buton ">
+                <div class="btn buton " style="background-color: rgba(0,0,0, 0.4);">
                      <a href="export.php" >Export</a>
                 </div>
              </div>
             <div class="col-md-6">
-                <div class="btn buton float-right" >
+                <div class="btn buton float-right"  style="background-color: rgba(0,0,0, 0.4);" >
                     <a href="addstudent.php"  >Adaugă student</a>
                 </div>
             </div>
@@ -76,7 +76,13 @@
 
                 <?php
                  $id = $_SESSION["userid"];
-                 $sql = "SELECT ID_STUDENT,NUME,FACULTATE,SPECIALIZARE,AN FROM studenti ORDER by FACULTATE, AN ASC;";
+                 $sql = "SELECT s.ID_STUDENT, s.NUME,s.FACULTATE,s.SPECIALIZARE,s.AN from studenti s
+                         INNER JOIN note n ON n.ID_STUDENT=s.ID_STUDENT
+                         INNER JOIN materii m ON n.ID_MATERIE=m.ID_MATERIE
+                         INNER join profesori p ON m.ID_PROFESOR=p.ID_PROFESOR where p.ID_PROFESOR = '$id'
+
+                  ORDER by FACULTATE, AN ASC;";
+
                  $result = mysqli_query($conn, $sql);
                  $resultCheck = mysqli_num_rows($result);
                  if($resultCheck > 0)
