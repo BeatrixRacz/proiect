@@ -28,6 +28,7 @@
 
     <div class="container-fluid "  style="width: 80%; margin-top: 50px">
         <div class="stud">Adăugare student:</div>
+
         <form method="POST" >
 
             <div class="form-outline mb-4">
