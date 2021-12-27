@@ -9,7 +9,12 @@
 // Fetch records from database
 <?php
 $id = $_SESSION["userid"];
-$sql = "SELECT ID_STUDENT,NUME,FACULTATE,SPECIALIZARE,AN,CNP,EMAIL, PAROLA, IBAN, DATA_NASTERII, STATUS, TELEFON, ADRESA, MEDIE_ADMITERE, LICEU FROM studenti ORDER by FACULTATE, AN ASC;";
+$sql = "SELECT s.ID_STUDENT, s.NUME,s.FACULTATE,s.SPECIALIZARE,s.AN, s.CNP, s.EMAIL, s.PAROLA, s.IBAN, s.DATA_NASTERII, s.STATUS, s.TELEFON, s.ADRESA, s.MEDIE_ADMITERE, s.LICEU from studenti s
+                         INNER JOIN note n ON n.ID_STUDENT=s.ID_STUDENT
+                         INNER JOIN materii m ON n.ID_MATERIE=m.ID_MATERIE
+                         INNER join profesori p ON m.ID_PROFESOR=p.ID_PROFESOR where p.ID_PROFESOR = '$id'
+
+                  ORDER by FACULTATE, AN ASC;";
 $result = mysqli_query($conn, $sql);
 $resultCheck = mysqli_num_rows($result);
 if($resultCheck > 0){
