@@ -36,6 +36,7 @@
              <h3>Lista studenți</h3>
         </div>
         <div class="row">
+
              <div class="col-md-6" >
                 <div class="btn buton " style="background-color: rgba(0,0,0, 0.4);">
                      <a href="export.php" >Export</a>

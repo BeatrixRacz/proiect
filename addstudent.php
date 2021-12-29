@@ -26,8 +26,25 @@
 
 <div   id="main">
 
+
+
     <div class="container-fluid "  style="width: 80%; margin-top: 50px">
         <div class="stud">Adăugare student:</div>
+
+        <form class="form-horizontal" action="" method="post"
+              name="frmCSVImport" id="frmCSVImport"
+              enctype="multipart/form-data">
+            <div class="input-row">
+                <label class="col-md-4 control-label">Choose CSV
+                    File</label> <input type="file" name="file"
+                                        id="file" accept=".csv">
+                <button type="submit" id="submit" name="import"
+                        class="btn-submit"><a href="import.php"  >Import</a></button>
+                <br />
+
+            </div>
+
+        </form>
 
         <form method="POST" >
 
