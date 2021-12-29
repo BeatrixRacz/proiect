@@ -41,7 +41,7 @@ include_once 'includes/db.inc.php';
         <form method="POST" >
 
             <div class="form-outline mb-4">
-                <label class="form-label" for="nume">ID student:</label>
+                <label class="form-label" for="id">ID student:</label>
                 <input type="text" name="id" id="id" class="form-control form-control-lg" />
             </div>
             <div class="form-outline mb-4">
@@ -49,10 +49,10 @@ include_once 'includes/db.inc.php';
                 <input type="text" name="nume" id="nume" class="form-control form-control-lg" />
             </div>
             <div class="form-outline mb-4">
-                <label class="form-label" for="nume">Materie:</label>
+                <label class="form-label" for="materie">Materie:</label>
                 <input type="text" name="materie" id="materie" class="form-control form-control-lg" />
             </div>
-            <button type="submit" name="submit" class="btn  btn-lg btn-block" style="background-color: #383838; color: white;">Inscriere</button>
+            <button type="submit" name="submit" class="btn  btn-lg btn-block" style="background-color: #383838; color: white;"><a href="inscriere.php">Inscriere</a></button>
 
 
         </form>
