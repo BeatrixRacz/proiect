@@ -38,7 +38,7 @@
         </div>
         <div class="row">
 
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="btn buton float-right"  style="background-color: rgba(0,0,0, 0.4);" >
                     <a href="inscriere.php"  >Inscrie student</a>
                 </div>
