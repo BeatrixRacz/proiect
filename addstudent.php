@@ -31,15 +31,15 @@
     <div class="container-fluid "  style="width: 80%; margin-top: 50px">
         <div class="stud">Adăugare student:</div>
 
-        <form class="form-horizontal" action="" method="post"
+        <form class="form-horizontal" action="import.php" method="post"
               name="frmCSVImport" id="frmCSVImport"
               enctype="multipart/form-data">
             <div class="input-row">
                 <label class="col-md-4 control-label">Choose CSV
                     File</label> <input type="file" name="file"
                                         id="file" accept=".csv">
-                <button type="submit" id="submit" name="import"
-                        class="btn-submit"><a href="import.php"  >Import</a></button>
+                <button type="submit" id="import" name="import"
+                        class="btn-submit">Import</button>
                 <br />
 
             </div>
