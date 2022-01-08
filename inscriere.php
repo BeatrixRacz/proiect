@@ -33,7 +33,10 @@ include_once 'includes/db.inc.php';
 <div   id="main">
 
 
+    <?php
 
+
+    ?>
     <div class="container-fluid "  style="width: 80%; margin-top: 50px">
         <div class="stud">Inscrie student:</div>
 
@@ -41,8 +44,8 @@ include_once 'includes/db.inc.php';
         <form method="POST" >
 
             <div class="form-outline mb-4">
-                <label class="form-label" for="id">ID student:</label>
-                <input type="text" name="id" id="id" class="form-control form-control-lg" />
+                <label class="form-label" for="id">CNP student:</label>
+                <input type="text" name="cnp" id="cnp" class="form-control form-control-lg" />
             </div>
             <div class="form-outline mb-4">
                 <label class="form-label" for="nume">Nume student:</label>
@@ -56,6 +59,7 @@ include_once 'includes/db.inc.php';
 
 
         </form>
+
     </div>
 </div>
 

@@ -37,6 +37,28 @@
 
             </div>
         </div>
+
+    <form class="form-horizontal" action="import_note.php" method="post"
+          name="frmCSVImport" id="frmCSVImport"
+          enctype="multipart/form-data">
+        <div class="input-row">
+            <label class="col-md-4 control-label">Choose CSV
+                File</label> <input type="file" name="file"
+                                    id="file" accept=".csv">
+            <button type="submit" id="import" name="import"
+                    class="btn-submit">Import</button>
+            <br />
+
+        </div>
+
+    </form>
+
+    <div class="col-md-6" >
+        <div class="btn buton " style="background-color: rgba(0,0,0, 0.4);">
+            <a href="export_note.php" >Export</a>
+        </div>
+    </div>
+
     <div class="row ">
         <div class="col-md-12 ">
             <table class="table  table-sm table-hover " >
