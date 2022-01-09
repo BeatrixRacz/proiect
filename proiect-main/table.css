@@ -1,0 +1,192 @@
+.appBackground {
+    background: rgb(153,211,223);
+    background-repeat: no-repeat;
+    background: linear-gradient(45deg, rgba(153,211,223,1) 0%, rgba(136,187,214,1) 25%, rgba(205,205,205,1) 75%, rgba(185,185,185,1) 100%);
+    background-attachment: fixed;
+    height: 100%;
+}
+
+.onright{
+    float:right;
+}
+.outer{
+    margin-top:100px;
+}
+.divs{
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(199, 197, 197));
+}
+.nav{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+    height: 100%;
+    width: 18%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: 	#383838;
+    transition: 0.5s;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+.sidebar-logo {
+    width: 100%;
+
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color:  #f1f1f1;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: 	#181818 ;
+}
+
+main .sidebar {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.material-icons,
+.icon-text {
+    vertical-align: middle;
+}
+
+.material-icons {
+    padding-bottom: 3px;
+    margin-right: 30px;
+}
+
+#main {
+    padding: 16px;
+    margin-left: 18%;
+    transition: margin-left 0.5s;
+
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+    .sidebar a {
+        font-size: 18px;
+    }
+}
+
+.titlu{
+    font-family: "Baskerville Old Face";
+    font-size: 55px;
+    width:100%;
+    height: 300px;
+    padding-top: 100px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.stud{
+    padding-bottom: 20px;
+    font-family: "Baskerville Old Face";
+    font-size: 50px;
+}
+
+.inf{
+    font-family: "Baskerville Old Face";
+    font-size: 26px;
+    width:100%;
+    height: 300px;
+    padding-top: 70px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.reclama{
+    height: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #E8E8E8 ;
+    box-shadow: 8px 8px 8px 1px #969696;
+    -webkit-box-shadow:  8px 8px 8px 8px #969696;
+    border-radius: 25px;
+
+}
+.photo{
+    background-size: cover;
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+
+    height:100%;
+    border-radius: 25px;
+}
+.bg-text {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}
+.reclama:hover{
+    height: 310px;
+    width: 340px;
+    background-color: #D0D0D0;
+}
+.photo:hover{
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+}
+.counter {
+    background-color:#f5f5f5;
+    padding: 20px 0;
+    border-radius: 5px;
+}
+
+.count-title {
+    font-size: 40px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.count-text {
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.fa-2x {
+    margin: 0 auto;
+    float: none;
+    display: table;
+    color: #4ad1e5;
+}
+.buton{
+    margin-bottom: 10px;
+    background-color: #88BBD6;
+}
+
+.buton a{
+    color: white;
+
+}
