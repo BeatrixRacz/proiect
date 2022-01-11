@@ -3,6 +3,9 @@
 	if (!isset($_SESSION["userid"])) {
 		header("Location: login.php");
 	}
+    if ($_SESSION["type"] != "PROFESOR") {
+        header("Location: login.php");
+    }
 	include_once 'includes/db.inc.php';
 ?>
 <!DOCTYPE html>

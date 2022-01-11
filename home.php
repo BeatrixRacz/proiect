@@ -3,6 +3,9 @@
 	if (!isset($_SESSION["userid"])) {
 		header("Location: login.php");
 	}
+    if ($_SESSION["type"] != "STUDENT") {
+        header("Location: login.php");
+    }
 	include_once 'includes/db.inc.php';
 ?>
 
@@ -19,6 +22,32 @@
           <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <title>Home</title>
+
+    <style>
+        .alert {
+        padding: 20px;
+        background-color: #f44336;
+        color: white;
+        opacity: 1;
+        transition: opacity 0.6s;
+        margin-bottom: 15px;
+        }
+        .alert.warning {background-color: #ff9800;}
+        .closebtn {
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+        }
+        .closebtn:hover {
+        color: black;
+        }
+    </style>
+
 </head>
 <body class="appBackground">
 
@@ -30,8 +59,27 @@
     <a href="login.php" style="position: fixed; bottom: 0; width:18%"><i class="material-icons">logout</i><span class="icon-text">Iesire</span></a>
 </div>
 
+<div id="main">
+    <?php
+        $id = $_SESSION["userid"];
+        $sql = "SELECT PAROLA
+        FROM studenti
+        WHERE ID_STUDENT = '$id';";
+        $result = mysqli_query($conn, $sql);
+        $resultCheck = mysqli_num_rows($result);
+        if($resultCheck > 0)
+        {
+            while($row = mysqli_fetch_assoc($result))
+            {
+                if ($row['PAROLA'] == "DefaultPassword123")
+                    echo "<div class='alert warning'>
+                    <span class='closebtn'>&times;</span>  
+                    <strong>Warning!</strong> Change your default password from your profile page!
+                  </div>";
+            }
+        }
+    ?>
 
-<div   id="main">
     <div class="container-fluid" style="margin-top: 10px">
         <div class="row">
             <div class="col-md-12">
@@ -108,7 +156,18 @@
     </div>
 </div>
 
+<script>
+    var close = document.getElementsByClassName("closebtn");
+    var i;
 
+    for (i = 0; i < close.length; i++) {
+    close[i].onclick = function(){
+        var div = this.parentElement;
+        div.style.opacity = "0";
+        setTimeout(function(){ div.style.display = "none"; }, 600);
+    }
+    }
+</script>
 
 </body>
 </html>
